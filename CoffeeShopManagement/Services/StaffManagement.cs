@@ -10,6 +10,7 @@ namespace CoffeeShopManagement.Services
         public IEnumerable<Staff> GetListStaff()
         {
             var listStaffs = StaffData.ListStaff();
+            Log.Info("Get staff successfully");
             return listStaffs;
         }
     }

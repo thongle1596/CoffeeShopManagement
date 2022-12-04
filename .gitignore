@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+.vs
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
