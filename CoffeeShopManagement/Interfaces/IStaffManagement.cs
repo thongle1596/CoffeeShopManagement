@@ -1,10 +1,11 @@
 ﻿using CoffeeShopManagement.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CoffeeShopManagement.Interfaces
 {
     public interface IStaffManagement
     {
-        IEnumerable<Staff> GetListStaff();
+        Task<IEnumerable<Staff>> GetListStaff();
     }
 }

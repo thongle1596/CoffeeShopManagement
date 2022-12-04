@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using CoffeeShopManagement.Models;
 using CoffeeShopManagement.Interfaces;
+using System.Threading.Tasks;
 
 namespace CoffeeShopManagement.Controllers
 {
@@ -16,9 +17,9 @@ namespace CoffeeShopManagement.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Staff> GetStaff()
+        public async Task<IEnumerable<Staff>> GetStaffAsync()
         {
-            var listStaff = _staffManagement.GetListStaff();
+            var listStaff = await _staffManagement.GetListStaff();
             if(listStaff == null)
             {
                 Log.Info("List staff Empty");
