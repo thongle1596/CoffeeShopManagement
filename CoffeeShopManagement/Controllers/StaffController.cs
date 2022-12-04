@@ -19,6 +19,14 @@ namespace CoffeeShopManagement.Controllers
         public IEnumerable<Staff> GetStaff()
         {
             var listStaff = _staffManagement.GetListStaff();
+            if(listStaff == null)
+            {
+                Log.Info("List staff Empty");
+            }
+            else
+            {
+                Log.Info("Get staff successfully");
+            }
             return listStaff;
         }
     }
